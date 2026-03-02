@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Monthsary ❤️</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      max-width: 650px;
+      width: 100%;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    h1 {
+      color: #ff4d6d;
+      margin-bottom: 10px;
+    }
+
+    .date {
+      color: #888;
+      margin-bottom: 20px;
+    }
+
+    .message {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 12px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    button {
+      background: #ff4d6d;
+      border: none;
+      padding: 12px 25px;
+      color: white;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #e63b5a;
+    }
+
+    .hidden {
+      display: none;
+      margin-top: 20px;
+      font-size: 20px;
+      color: #ff4d6d;
+      font-weight: bold;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="card">
+    <!-- ✏️ EDIT NAMES HERE -->
+    <h1>Happy Monthsary, My Love 💖</h1>
+
+```
+<div class="date" id="monthsaryDate"></div>
+
+<!-- ✏️ EDIT YOUR MESSAGE HERE -->
+<p class="message">
+  Thank you for being part of my life. Every day with you is my favorite.
+  I love all the memories we've made and the many more to come. ❤️
+</p>
+
+<!-- 📸 PUT YOUR PHOTOS HERE -->
+<!-- IMPORTANT: upload your photos to GitHub in the SAME folder -->
+<div class="gallery">
+  <img src="photo1.jpg" alt="Our photo 1">
+  <img src="photo2.jpg" alt="Our photo 2">
+  <img src="photo3.jpg" alt="Our photo 3">
+  <img src="photo4.jpg" alt="Our photo 4">
+  <img src="photo4.jpg" alt="Our photo 5">
+</div>
+
+<button onclick="showSurprise()">Click for Surprise 🎁</button>
+
+<!-- ✏️ EDIT SECRET MESSAGE -->
+<div class="hidden" id="surpriseText">
+  I love you always and forever! 💕
+</div>
+```
+
+  </div>
+
+  <script>
+    const today = new Date();
+    document.getElementById("monthsaryDate").innerText =
+      today.toDateString();
+
+    function showSurprise() {
+      document.getElementById("surpriseText").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
+
